@@ -76,6 +76,12 @@ claude mcp add --transport http strava-mcp https://mcp.strava.com/mcp
   prescribing recovery against the athlete's wishes when the data warrants.
 - **Periodized toward one A-event** (Whistler, September): base → build → peak → taper.
 
+## Not yet built
+
+- **Automated scheduled summary emails.** Planned: a recurring job (weekly-ish) that runs
+  a `/weekly-review`-style analysis and emails a concise summary + advice to Ricky's
+  Gmail, so updates arrive without him prompting. See Status.md open items for design notes.
+
 ## Repo
 
 GitHub: https://github.com/rrickyhuang/Claude-Coach — personal health data gitignored.
