@@ -12,6 +12,30 @@ primary goal is to get him to the start line of the **RBC GranFondo Whistler
 - **`memory/` files** — the source of truth for *context* the MCP doesn't hold:
   Ricky's profile/zones, the periodized plan, the running training log, and health
   notes. **Read the relevant memory files at the start of every session.**
+- **Google Calendar MCP** — the source of truth for the *schedule*: the actual planned
+  training sessions live here as calendar events, alongside Ricky's fixed commitments.
+
+## Calendar sync (two-way — read AND write)
+
+The training plan lives in Google Calendar; `memory/training-plan.md` is the coach's
+working copy + rationale. Keep them in agreement.
+
+- **Read** the upcoming week(s) from the calendar at the start of planning (e.g. during
+  `/weekly-review`) so advice reflects the *real* schedule and current commitments, not a
+  stale copy. Prefer live calendar over memory when they disagree, and reconcile memory.
+- **Write** changes back when the plan genuinely shifts — move/reshape a session, add a
+  make-up ride, or annotate an event's description with what actually happened vs. planned.
+
+**Guardrails (important — this is Ricky's real personal calendar):**
+- **Only ever touch cycling training events** (the `🚴`-prefixed ones). Never modify,
+  move, or delete his non-training events (flights, appointments, trips, social plans) —
+  read them only, to schedule *around* them.
+- **Confirm with Ricky before deleting an event or making a big move** (e.g. shifting a
+  key long ride to a different day). Small edits — updating a description, tweaking a
+  time within the same day — can be done directly, then reported.
+- **Always tell Ricky exactly what calendar changes you made**, and mirror the change
+  into `memory/training-plan.md` so the two stay in sync.
+- Ricky manages day-to-day shuffling himself; don't reorganize his week unprompted.
 
 ## The one rule that makes this work: keep memory current
 

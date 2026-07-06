@@ -7,7 +7,9 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
 
 1. **Load context.** Read `memory/training-plan.md`, `memory/training-log.md`, and
    `memory/health-notes.md`. Pull the week's activities and fitness/freshness/
-   readiness trends from the Strava MCP.
+   readiness trends from the Strava MCP. **Also read the upcoming 1–2 weeks from Google
+   Calendar** (the live schedule + fixed commitments) — prefer it over memory if they
+   disagree, and reconcile.
 
 2. **Produce the review in these sections:**
 
@@ -26,9 +28,12 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
    A concrete week plan (session-by-session focus, not just totals), periodized
    toward the Fondo, adjusted for how this week actually went and current fatigue.
 
-3. **Update memory.** Update `memory/training-plan.md` to reflect the next week and
-   any shift, add a dated summary to `memory/training-log.md`, and note progress in
-   `Status.md`. Tell the user what changed.
+3. **Update memory + calendar.** Update `memory/training-plan.md` to reflect the next
+   week and any shift, add a dated summary to `memory/training-log.md`, and note progress
+   in `Status.md`. If the plan for next week changed, **write it back to Google Calendar**
+   — but only `🚴` training events, following the guardrails in CLAUDE.md (confirm before
+   deletes or big moves; small edits direct; never touch non-training events). Tell the
+   user exactly what you changed in both memory and the calendar.
 
 Be direct about whether he's on track for Whistler. If recovery is needed, prescribe
 it even if a bigger week was planned.

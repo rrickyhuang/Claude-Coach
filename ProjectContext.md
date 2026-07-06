@@ -31,6 +31,10 @@ with the user. This project closes all three:
 3. **Slash commands** (`.claude/commands/`) run structured, repeatable analyses.
 4. **`memory/`** holds the context Strava doesn't: profile/zones, the periodized plan,
    a running training log, and health notes. Coach updates these each session.
+5. The **Google Calendar MCP** provides two-way schedule sync: the actual training
+   sessions live as `🚴` calendar events (alongside Ricky's fixed commitments). The coach
+   reads the live schedule when planning and writes plan changes back — guardrailed to
+   only ever touch training events, and to confirm before deletes/big moves.
 
 ## Key files
 
@@ -60,6 +64,10 @@ claude mcp add --transport http strava-mcp https://mcp.strava.com/mcp
 
 - **Strava MCP is read-only.** Nothing is written back to Strava or pushed to a device;
   all coaching output lives in this repo's memory files.
+- **Google Calendar is the schedule's source of truth, synced two-way.** Training
+  sessions are `🚴`-prefixed events; `memory/training-plan.md` mirrors them + holds
+  rationale. The coach may read the whole calendar (to plan around commitments) but only
+  ever *writes* to `🚴` training events, and confirms before deletes or big moves.
 - **Personal data is gitignored.** Everything in `memory/` (except `*.example.md`) plus
   `Status.md` stays private; the repo is safe to make public.
 - **Memory is the differentiator.** The standing rule in `CLAUDE.md` — update the log/
