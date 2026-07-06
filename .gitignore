@@ -4,9 +4,6 @@
 memory/*.md
 !memory/*.example.md
 
-# Personal project-tracking doc (dated training progress lives here)
-Status.md
-
 # Secrets / local config
 .env
 .env.*
