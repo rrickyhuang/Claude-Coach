@@ -7,7 +7,7 @@ trend, new baseline). Copy this file to `athlete-profile.md` and fill it in._
 - Name:
 - Age / DOB:
 - Height / weight:
-- Location: Vancouver, BC
+- Location:
 
 ## Physiology
 - FTP (watts / W/kg):

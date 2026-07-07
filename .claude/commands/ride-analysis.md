@@ -74,8 +74,8 @@ Flag the temperature confound when temp data is missing/low.
   test lands — reason in RPE + the flat-ground ceiling too (see profile), not zones alone.
 
 ## Standing coaching points to reinforce
-- Long rides: hold the ~140 bpm flat-ground ceiling early; let climbs go above. Praise Z2 discipline.
+- Long rides: hold the athlete's flat-ground HR ceiling early (see `memory/athlete-profile.md`); let climbs go above. Praise Z2 discipline.
 - Fuel ~60 g carbs/hr, small & frequent, from hour 1; no big solid meal right before a climb.
 - Electrolytes the whole ride, ~500–750 ml/hr, sip every 15–20 min; weigh before/after, keep loss <2%.
-- Track whether drift **onset moves later / shrinks** across the July–August long rides — that's the key progress signal.
-- Protect the **Aug 15 dress rehearsal** above all other sessions.
+- Track whether drift **onset moves later / shrinks** across upcoming long rides — that's the key progress signal.
+- Protect whatever session `memory/training-plan.md` flags as the key dress-rehearsal/peak ride above all others.

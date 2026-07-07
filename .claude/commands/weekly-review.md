@@ -35,5 +35,5 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
    deletes or big moves; small edits direct; never touch non-training events). Tell the
    user exactly what you changed in both memory and the calendar.
 
-Be direct about whether he's on track for Whistler. If recovery is needed, prescribe
-it even if a bigger week was planned.
+Be direct about whether the athlete is on track for their target event. If recovery is
+needed, prescribe it even if a bigger week was planned.
