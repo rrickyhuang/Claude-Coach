@@ -64,7 +64,7 @@ This project fixes that by wrapping it in three things Claude Code makes real:
 - `memory/training-log.md` — dated per-activity + weekly entries (newest at top)
 - `memory/health-notes.md` — sleep/fatigue/injury/nutrition/readiness signals
 - `memory/*.example.md` — committed templates for each of the above
-- `TODO.md` — open tasks/ideas for this project (public-safe; no personal health data)
+- Open tasks/ideas are tracked as [GitHub Issues](https://github.com/rrickyhuang/Claude-Coach/issues)
 
 ## Settled decisions
 
@@ -84,8 +84,8 @@ This project fixes that by wrapping it in three things Claude Code makes real:
 
 ## What's tracked vs. private
 
-- **Tracked (safe to push):** this README, `CLAUDE.md`, `TODO.md`, the
-  `.claude/commands/`, and the `memory/*.example.md` templates.
+- **Tracked (safe to push):** this README, `CLAUDE.md`, the `.claude/commands/`, and
+  the `memory/*.example.md` templates.
 - **Gitignored (private):** everything in `memory/` (real health/training data) and any
   secrets. See `.gitignore`.
 
@@ -99,4 +99,4 @@ This project fixes that by wrapping it in three things Claude Code makes real:
 
 - **Automated scheduled summary emails** — a recurring job that runs a
   `/weekly-review`-style analysis and emails a concise summary + advice, so updates
-  arrive without prompting. See `TODO.md`.
+  arrive without prompting. See the [Issues](https://github.com/rrickyhuang/Claude-Coach/issues).
