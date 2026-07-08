@@ -5,11 +5,11 @@ description: Weekly training review — progress vs. plan and next week's focus
 Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
 **last 7 days**.
 
-1. **Load context.** Read `memory/training-plan.md`, `memory/training-log.md`, and
-   `memory/health-notes.md`. Pull the week's activities and fitness/freshness/
-   readiness trends from the Strava MCP. **Also read the upcoming 1–2 weeks from Google
-   Calendar** (the live schedule + fixed commitments) — prefer it over memory if they
-   disagree, and reconcile.
+1. **Load context.** Read `memory/goals.md`, `memory/training-plan.md`,
+   `memory/training-log.md`, and `memory/health-notes.md`. Pull the week's activities and
+   fitness/freshness/readiness trends from the Strava MCP. **Also read the upcoming 1–2
+   weeks from Google Calendar** (the live schedule + fixed commitments) — prefer it over
+   memory if they disagree, and reconcile.
 
 2. **Produce the review in these sections:**
 
@@ -19,14 +19,17 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
 
    ### 📈 Fitness trend
    Direction of CTL/fitness, ATL/fatigue, and form/freshness. Are we building,
-   holding, or digging a hole? How many weeks to Whistler and are we on track?
+   holding, or digging a hole? If there's a dated A goal in `memory/goals.md`, how many
+   weeks remain and are we on track?
 
    ### ✅ Wins / ⚠️ Concerns
    Honest read — consistency, key sessions hit or missed, fatigue/health flags.
 
    ### 🗓️ Next week
-   A concrete week plan (session-by-session focus, not just totals), periodized
-   toward the Fondo, adjusted for how this week actually went and current fatigue.
+   A concrete week plan (session-by-session focus, not just totals), shaped by the
+   current goal(s) in `memory/goals.md` (periodized toward a dated event, or the current
+   focus block for an ongoing goal), adjusted for how this week actually went and current
+   fatigue.
 
 3. **Update memory + calendar.** Update `memory/training-plan.md` to reflect the next
    week and any shift, add a dated summary to `memory/training-log.md`, and note progress

@@ -28,7 +28,5 @@ trend, new baseline). Copy this file to `athlete-profile.md` and fill it in._
 - Power meter / HR monitor / head unit:
 
 ## Goals
-- **A race:** RBC GranFondo Whistler (September) — ~122 km, Sea-to-Sky, lots of climbing
-- Time / performance goal:
-- Secondary goals (general health, weight, etc.):
-- Constraints (work schedule, days available to train):
+_See `memory/goals.md` — the source of truth for target events, non-event goals, and
+training constraints. Don't duplicate them here._

@@ -1,7 +1,8 @@
-# GranFondoCoach
+# ClaudeCoach
 
-A personal AI cycling/endurance coach built on **Claude + the official Strava MCP**,
-aimed at training for the **RBC GranFondo Whistler** (September) and general health.
+A personal AI cycling/endurance coach built on **Claude + the official Strava MCP**.
+Goal-agnostic: works for a target event, an ongoing fitness/health goal, or several
+goals at once — see `memory/goals.md`.
 
 The Strava MCP is a great *data pipe* but not, on its own, a coach: its memory is just
 a per-conversation summary, it has no consistent method, and it tends to agree with you.
@@ -12,8 +13,8 @@ This project fixes that by wrapping it in three things Claude Code makes real:
 2. **Structured commands** — `/ride-analysis` and `/weekly-review` run the *same*
    analysis template every time, so feedback is consistent, not improvised.
 3. **A defined method** — `CLAUDE.md` encodes a real coaching philosophy (periodization
-   toward the Fondo, when to push vs. recover) and tells Claude to hold you accountable
-   rather than just validate you.
+   toward a dated goal, rolling focus blocks for ongoing goals, when to push vs. recover)
+   and tells Claude to hold you accountable rather than just validate you.
 4. **Two-way Google Calendar sync** — the actual training plan lives as `🚴`-prefixed
    calendar events alongside your real commitments. Claude reads the live schedule when
    planning and writes changes back, guardrailed to only ever touch training events and
@@ -26,8 +27,9 @@ This project fixes that by wrapping it in three things Claude Code makes real:
 2. **`CLAUDE.md`** defines the coaching method, tone, safety rules, calendar-sync
    guardrails, and the standing instruction to update memory after every session.
 3. **Slash commands** (`.claude/commands/`) run structured, repeatable analyses.
-4. **`memory/`** holds context Strava doesn't: profile/zones, the periodized plan, a
-   running training log, and health notes. Coach updates these each session.
+4. **`memory/`** holds context Strava doesn't: what you're training toward (goals),
+   profile/zones, the periodized plan, a running training log, and health notes. Coach
+   updates these each session.
 5. The **Google Calendar MCP** provides the live schedule and is written back to when
    the plan shifts.
 
@@ -42,6 +44,7 @@ This project fixes that by wrapping it in three things Claude Code makes real:
 2. **Fill in your memory files.** Copy each `memory/*.example.md` to the same name
    without `.example` and fill it in (these real files are gitignored):
    ```
+   cp memory/goals.example.md          memory/goals.md
    cp memory/athlete-profile.example.md memory/athlete-profile.md
    cp memory/training-plan.example.md  memory/training-plan.md
    cp memory/training-log.example.md   memory/training-log.md
@@ -59,8 +62,10 @@ This project fixes that by wrapping it in three things Claude Code makes real:
   rules (the system's brain)
 - `.claude/commands/ride-analysis.md` — `/ride-analysis`: structured post-activity breakdown
 - `.claude/commands/weekly-review.md` — `/weekly-review`: weekly progress vs. plan + next week
-- `memory/athlete-profile.md` — durable facts: zones, history, goals, constraints
-- `memory/training-plan.md` — living periodized plan → Whistler
+- `memory/goals.md` — what you're training toward: target event(s), non-event goals,
+  constraints (source of truth for goal state)
+- `memory/athlete-profile.md` — durable facts: zones, physiology, history
+- `memory/training-plan.md` — living plan toward the current goal(s)
 - `memory/training-log.md` — dated per-activity + weekly entries (newest at top)
 - `memory/health-notes.md` — sleep/fatigue/injury/nutrition/readiness signals
 - `memory/*.example.md` — committed templates for each of the above
@@ -80,7 +85,9 @@ This project fixes that by wrapping it in three things Claude Code makes real:
   plan/health files every session — is what makes this more than a stateless chat.
 - **Coach is deliberately non-sycophantic.** The method mandates honest pushback and
   prescribing recovery against the athlete's wishes when the data warrants.
-- **Periodized toward one A-event** (Whistler, September): base → build → peak → taper.
+- **Goal-agnostic periodization.** `memory/goals.md` drives it: a dated A-goal gets
+  base → build → peak → taper; ongoing/non-event goals get rolling focus blocks instead.
+  Multiple goals are prioritized (A goal's calendar wins) rather than assumed away.
 
 ## What's tracked vs. private
 
