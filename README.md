@@ -6,7 +6,7 @@ goals at once — see `memory/goals.md`.
 
 The Strava MCP is a great *data pipe* but not, on its own, a coach: its memory is just
 a per-conversation summary, it has no consistent method, and it tends to agree with you.
-This project fixes that by wrapping it in three things Claude Code makes real:
+This project fixes that by wrapping it in four things Claude Code makes real:
 
 1. **Persistent memory** — `memory/` files Claude reads *and updates* after every session,
    so training state compounds instead of evaporating between chats.
@@ -42,7 +42,8 @@ This project fixes that by wrapping it in three things Claude Code makes real:
    Then authorize via the OAuth browser prompt. (On claude.ai/Cowork instead:
    Customize → Connectors → search "Strava" → Connect.)
 2. **Fill in your memory files.** Copy each `memory/*.example.md` to the same name
-   without `.example` and fill it in (these real files are gitignored):
+   without `.example` and fill it in (these real files are gitignored). On macOS/Linux
+   use `cp`; on Windows PowerShell use `Copy-Item`:
    ```
    cp memory/goals.example.md          memory/goals.md
    cp memory/athlete-profile.example.md memory/athlete-profile.md

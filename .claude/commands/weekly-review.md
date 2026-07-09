@@ -32,8 +32,8 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
    fatigue.
 
 3. **Update memory + calendar.** Update `memory/training-plan.md` to reflect the next
-   week and any shift, add a dated summary to `memory/training-log.md`, and note progress
-   in `Status.md`. If the plan for next week changed, **write it back to Google Calendar**
+   week and any shift, and add a dated summary to `memory/training-log.md`. If the plan
+   for next week changed, **write it back to Google Calendar**
    — but only `🚴` training events, following the guardrails in CLAUDE.md (confirm before
    deletes or big moves; small edits direct; never touch non-training events). Tell the
    user exactly what you changed in both memory and the calendar.
