@@ -1,5 +1,6 @@
 ---
 description: Weekly training review — progress vs. plan and next week's focus
+argument-hint: "[week description, e.g. 'last week' or a date range — omit for last 7 days]"
 ---
 
 Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the

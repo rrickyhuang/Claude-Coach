@@ -1,10 +1,17 @@
 ---
 description: Structured post-activity analysis of the most recent (or specified) ride/hike
+argument-hint: "[activity name/date] [-- how it felt, struggles, questions, food/hydration notes]"
 ---
 
-Run a consistent, structured analysis of a single activity. If the user named an
-activity or date in `$ARGUMENTS`, use that; otherwise analyze their **most recent**
-Strava activity.
+Run a consistent, structured analysis of a single activity. Parse `$ARGUMENTS` for two
+independent, optional parts:
+- **Which activity** — a name, date, or description. Default to the **most recent**
+  Strava activity if none is given.
+- **Subjective notes from the athlete** — how it felt, where they struggled, specific
+  questions they want answered, or food/hydration details (e.g. what/when they ate or
+  drank, GI issues, cramping, bonking). This can be free text anywhere in `$ARGUMENTS` —
+  it doesn't need a special delimiter, just read the intent. If present, treat it as
+  first-class input to weigh alongside the Strava data, not an aside.
 
 Steps:
 
@@ -28,18 +35,28 @@ Steps:
    2–4 specific observations grounded in the numbers — pacing, zone distribution,
    cardiac drift / durability, climbing power, fade in the back half, fueling signs.
 
+   ### 🗣️ Athlete report
+   Only include this section if the athlete gave subjective notes. Reconcile what they
+   said (how it felt, where they struggled, food/hydration specifics) against what the
+   data shows — confirm it, add nuance, or gently push back if the data tells a different
+   story (e.g. legs "felt fine" but HR drift says otherwise). Directly answer any
+   questions they asked.
+
    ### 💪 What went well
    Genuine positives (only real ones).
 
    ### ⚠️ Watch / adjust
-   Fatigue, overreaching, or execution issues — and whether recovery is needed.
+   Fatigue, overreaching, or execution issues — and whether recovery is needed. Fold in
+   any struggle points or fueling issues the athlete reported.
 
    ### ✅ 2–3 concrete next steps
    Specific, actionable, tied to the plan and the goal(s) in `memory/goals.md`.
 
 3. **Update memory.** Append a dated entry to `memory/training-log.md` (newest at
-   top), update `health-notes.md` / `training-plan.md` if warranted. Tell the user
-   exactly what you updated.
+   top) — include the athlete's subjective notes verbatim or lightly summarized, not
+   just the numbers. Update `health-notes.md` (e.g. new fueling issue, injury signal,
+   fatigue pattern) / `training-plan.md` if warranted. Tell the user exactly what you
+   updated.
 
 Keep it tight and specific. Cite the actual numbers you reasoned from. If the
 activity lacks HR/power, say the analysis is limited rather than inventing figures.
