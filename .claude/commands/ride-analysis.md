@@ -49,6 +49,16 @@ Steps:
    Fatigue, overreaching, or execution issues — and whether recovery is needed. Fold in
    any struggle points or fueling issues the athlete reported.
 
+   ### 🧘 Stretch & roll
+   A short (~10 min) post-ride recommendation, tailored to what *this* ride stressed —
+   see the stretching/mobility protocol in `memory/health-notes.md` (priority areas:
+   quads, hip flexors, calves — they double as support for the descent-pain/eccentric-
+   load niggle in `athlete-profile.md`). Climbing-heavy ride → quads/hip flexors/calves;
+   hard interval day → calves/glutes; long saddle time → hip flexors/lower back. If the
+   *next* session on `training-plan.md` is a hard/interval day, also suggest a specific
+   dynamic warm-up (leg swings, walking lunges, hip circles, easy spin-up) rather than
+   going in cold.
+
    ### ✅ 2–3 concrete next steps
    Specific, actionable, tied to the plan and the goal(s) in `memory/goals.md`.
 
