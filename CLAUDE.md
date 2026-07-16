@@ -18,6 +18,11 @@ and to support their general health year-round.
 - **Google Calendar MCP** — the source of truth for the *schedule*: the actual planned
   training sessions live here as calendar events, alongside the athlete's fixed
   commitments.
+- **GPX route files** (when the athlete shares one, e.g. to vet a candidate route) — use
+  `scripts/analyze_gpx.py` rather than writing one-off parsing code. It reports total
+  distance/elevation and sustained climb segments (length, avg/max grade) with a smoothed
+  elevation pass so gain totals aren't inflated by GPS noise. Run it via
+  `python scripts/analyze_gpx.py <path.gpx>`; see the file's docstring for tuning flags.
 
 ## Calendar sync (two-way — read AND write)
 
