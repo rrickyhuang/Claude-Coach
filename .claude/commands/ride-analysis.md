@@ -100,6 +100,23 @@ Flag the temperature confound when temp data is missing/low.
   (API `start_local` is already local).
 - **HR zones are provisional** (estimated max, likely a touch high) until the LTHR field
   test lands — reason in RPE + the flat-ground ceiling too (see profile), not zones alone.
+- **Never assume Strava laps are auto-generated.** Check lap distances first — near-uniform
+  (e.g. every 1 km/1 mi) means auto-lap; irregular distances mean the athlete pressed the
+  lap button manually (e.g. to mark interval reps). State which one it is rather than
+  asserting either as fact. (Learned 2026-07-15: called manual reps "auto-laps" without
+  checking — the irregular distances were the tell.)
+- **Cross-check this conversation before assigning a cause to an anomaly.** If the athlete
+  already told you about a planned stop, food break, mechanical, traffic light, etc.
+  earlier in the same session, that's ground truth — use it instead of inventing a plausible
+  story from the numbers alone (elapsed-vs-moving gaps, HR spikes during "recovery," etc.).
+  (Learned 2026-07-15: attributed a stopped-time gap to "traffic" when the athlete had
+  already mentioned a smoothie stop earlier in the conversation.)
+- **Label inferred causes as inferred, not confirmed.** A specific mechanical explanation
+  for a data blip (e.g. "that HR spike was a hard reaccel out of a stop") is a hypothesis
+  unless the raw stream or the athlete confirms it — say "likely" / "possibly," or ask,
+  rather than stating it as what happened. (Learned 2026-07-15: asserted a specific cause
+  for a 160 bpm reading during a recovery window that was at least as plausibly just HR
+  decay-lag from the end of the prior effort.)
 
 ## Standing coaching points to reinforce
 - Long rides: hold the athlete's flat-ground HR ceiling early (see `memory/athlete-profile.md`); let climbs go above. Praise Z2 discipline.

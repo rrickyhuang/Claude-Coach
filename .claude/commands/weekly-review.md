@@ -30,7 +30,11 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
    A concrete week plan (session-by-session focus, not just totals), shaped by the
    current goal(s) in `memory/goals.md` (periodized toward a dated event, or the current
    focus block for an ongoing goal), adjusted for how this week actually went and current
-   fatigue.
+   fatigue. **Check for commute-ride gaps** in the upcoming 1–2 weeks (see the
+   commute-ride gap-check rule in `CLAUDE.md`) and propose specific fill-in dates if any
+   exist — don't just note the gap, suggest dates using the real weekday start times in
+   `athlete-profile.md`. Consider whether a hard session that week could be folded into a
+   commute slot instead of scheduled separately.
 
 3. **Update memory + calendar.** Update `memory/training-plan.md` to reflect the next
    week and any shift, and add a dated summary to `memory/training-log.md`. If the plan

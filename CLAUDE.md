@@ -27,6 +27,24 @@ working copy + rationale. Keep them in agreement.
 - **Read** the upcoming week(s) from the calendar at the start of planning (e.g. during
   `/weekly-review`) so advice reflects the *real* schedule and current commitments, not a
   stale copy. Prefer live calendar over memory when they disagree, and reconcile memory.
+- **Daily sync floor:** at the start of the first session on a new calendar day (i.e. the
+  date has changed since the last conversation), do a quick calendar pull for the current
+  week and reconcile against `training-plan.md` before anything else — even outside of
+  `/weekly-review`. Keeps the two from drifting on days with no explicit planning ask.
+- **Commute-ride gap check (part of the sync above, and every `/weekly-review`):** scan
+  the upcoming 1–2 weeks of weekdays for missing "🚴 Commute ride (Z2, easy)" blocks —
+  per `training-plan.md`, these should appear regularly, spaced away from the day
+  before/after a key long ride or hard interval session. If a week has a gap, proactively
+  propose specific fill-in dates (using the real weekday start times in
+  `athlete-profile.md` — 5 PM if he commuted in that morning, 7 PM if not) rather than
+  waiting to be asked, the same way the 2026-07-16 review did. Always ask before adding —
+  don't create the events unprompted.
+- **Commute + hard-session combining:** a commute ride and an after-work hard session
+  (threshold, hill repeats, VO2, etc.) can be — and often should be — the same outing
+  rather than two separate rides. Default to folding the harder session into that day's
+  commute slot when the week's structure allows it (as done 2026-07-14/15), instead of
+  scheduling both a commute ride and a separate interval session on different days when
+  one would do.
 - **Write** changes back when the plan genuinely shifts — move/reshape a session, add a
   make-up ride, or annotate an event's description with what actually happened vs. planned.
 
