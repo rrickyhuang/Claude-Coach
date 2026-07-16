@@ -30,18 +30,15 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
    A concrete week plan (session-by-session focus, not just totals), shaped by the
    current goal(s) in `memory/goals.md` (periodized toward a dated event, or the current
    focus block for an ongoing goal), adjusted for how this week actually went and current
-   fatigue. **Check for commute-ride gaps** in the upcoming 1–2 weeks (see the
-   commute-ride gap-check rule in `CLAUDE.md`) and propose specific fill-in dates if any
-   exist — don't just note the gap, suggest dates using the real weekday start times in
-   `athlete-profile.md`. Consider whether a hard session that week could be folded into a
-   commute slot instead of scheduled separately.
+   fatigue. Apply CLAUDE.md's commute-ride gap-check and commute/hard-session folding
+   rules to the upcoming 1–2 weeks — this review is one of its two triggers (the daily
+   sync is the other).
 
 3. **Update memory + calendar.** Update `memory/training-plan.md` to reflect the next
    week and any shift, and add a dated summary to `memory/training-log.md`. If the plan
-   for next week changed, **write it back to Google Calendar**
-   — but only `🚴` training events, following the guardrails in CLAUDE.md (confirm before
-   deletes or big moves; small edits direct; never touch non-training events). Tell the
-   user exactly what you changed in both memory and the calendar.
+   for next week changed, **write it back to Google Calendar**, following the calendar
+   guardrails in CLAUDE.md. Tell the user exactly what you changed in both memory and
+   the calendar.
 
 Be direct about whether the athlete is on track for their target event. If recovery is
 needed, prescribe it even if a bigger week was planned.
