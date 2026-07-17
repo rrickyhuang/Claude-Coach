@@ -41,7 +41,11 @@ This project fixes that by wrapping it in four things Claude Code makes real:
    ```
    Then authorize via the OAuth browser prompt. (On claude.ai/Cowork instead:
    Customize → Connectors → search "Strava" → Connect.)
-2. **Fill in your memory files.** Copy each `memory/*.example.md` to the same name
+2. **Connect the Google Calendar MCP** — the schedule's source of truth, read and written
+   two-way (see `CLAUDE.md`'s "Calendar sync" section). On claude.ai/Cowork: Customize →
+   Connectors → search "Google Calendar" → Connect. For Claude Code, add the connector via
+   your MCP configuration and authorize via the OAuth browser prompt.
+3. **Fill in your memory files.** Copy each `memory/*.example.md` to the same name
    without `.example` and fill it in (these real files are gitignored). On macOS/Linux
    use `cp`; on Windows PowerShell use `Copy-Item`:
    ```
@@ -51,7 +55,7 @@ This project fixes that by wrapping it in four things Claude Code makes real:
    cp memory/training-log.example.md   memory/training-log.md
    cp memory/health-notes.example.md   memory/health-notes.md
    ```
-3. **Start coaching.** After a ride or hike:
+4. **Start coaching.** After a ride or hike:
    ```
    /ride-analysis            # structured post-activity breakdown
    /weekly-review            # progress vs. plan + next week's focus
