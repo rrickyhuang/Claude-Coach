@@ -62,6 +62,13 @@ Steps:
    ### ✅ 2–3 concrete next steps
    Specific, actionable, tied to the plan and the goal(s) in `memory/goals.md`.
 
+   ### 🔧 Maintenance check
+   Only include this section if `memory/bike-maintenance.md` shows an item newly
+   due-soon or overdue once this ride's distance is added to the bike's odometer (pull
+   current odometer from the Strava MCP gear data). One line, e.g. "Chain's at ~210 km
+   since last lube — due for a relube." Skip the section entirely if nothing's due; don't
+   run the full `/bike-maintenance` report here.
+
 3. **Update memory.** Append a dated entry to `memory/training-log.md` (newest at
    top) — include the athlete's subjective notes verbatim or lightly summarized, not
    just the numbers. Update `health-notes.md` (e.g. new fueling issue, injury signal,

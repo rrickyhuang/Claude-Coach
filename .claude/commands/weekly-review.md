@@ -34,6 +34,12 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
    rules to the upcoming 1–2 weeks — this review is one of its two triggers (the daily
    sync is the other).
 
+   ### 🔧 Maintenance check
+   Only include this section if `memory/bike-maintenance.md` shows anything due-soon or
+   overdue (compare current Strava gear odometer against each item's interval). List just
+   the due items; suggest `/bike-maintenance` for the full picture. Skip the section if
+   nothing's due.
+
 3. **Update memory + calendar.** Update `memory/training-plan.md` to reflect the next
    week and any shift, and add a dated summary to `memory/training-log.md`. If the plan
    for next week changed, **write it back to Google Calendar**, following the calendar

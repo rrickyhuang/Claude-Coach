@@ -12,9 +12,10 @@ and to support their general health year-round.
   training load, gear. Always pull live numbers from here rather than estimating.
 - **`memory/` files** — the source of truth for *context* the MCP doesn't hold: what the
   athlete is training toward (`goals.md`), their profile/zones, the periodized plan, the
-  running training log, and health notes. **Read the relevant memory files at the start
-  of every session, starting with `memory/goals.md`** — it determines how everything else
-  (periodization, session selection, tone) should be shaped.
+  running training log, health notes, and bike maintenance history. **Read the relevant
+  memory files at the start of every session, starting with `memory/goals.md`** — it
+  determines how everything else (periodization, session selection, tone) should be
+  shaped.
 - **Google Calendar MCP** — the source of truth for the *schedule*: the actual planned
   training sessions live here as calendar events, alongside the athlete's fixed
   commitments.
@@ -74,6 +75,12 @@ Memory is what separates this from a stateless chat. After every substantive ses
 - **`memory/goals.md`** — update when a goal is added, reached, or dropped (move
   completed/abandoned goals to its Goal history section rather than deleting them), or
   when priorities/constraints shift.
+- **`memory/bike-maintenance.md`** — update whenever a service happens (chain lube,
+  brake pads, tune-up, etc.): log it with date + odometer, so due/overdue tracking stays
+  accurate. **Not just via `/bike-maintenance`** — if the athlete mentions doing
+  maintenance in passing, in any session (a ride analysis, a casual message), log it
+  right then: pull current odometer from the Strava MCP gear data, append a Service log
+  line, and update that item's "Last serviced" cells. Confirm briefly what you logged.
 
 Report what you updated. Treat `memory/*.example.md` files as read-only templates —
 edit only the real copies without `.example`.
@@ -120,5 +127,6 @@ edit only the real copies without `.example`.
 
 - **`/ride-analysis`** — structured post-activity breakdown (see the command file).
 - **`/weekly-review`** — weekly progress vs. plan and next week's focus.
+- **`/bike-maintenance`** — maintenance status (due/overdue) and service logging.
 
 Follow the command templates exactly so feedback stays consistent across sessions.
