@@ -8,9 +8,13 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
 
 1. **Load context.** Read `memory/goals.md`, `memory/training-plan.md`,
    `memory/training-log.md`, and `memory/health-notes.md`. Pull the week's activities and
-   fitness/freshness/readiness trends from the Strava MCP. **Also read the upcoming 1–2
-   weeks from Google Calendar** (the live schedule + fixed commitments) — prefer it over
-   memory if they disagree, and reconcile.
+   fitness/freshness/readiness trends from the Strava MCP. Also pull the week's COROS
+   trend data — average and resting heart rate (`queryAvgHeartRate`,
+   `queryRestingHeartRate`), sleep (`querySleepData`), stress (`queryStressLevel`), and
+   training load assessment (`queryTrainingLoadAssessment`) — alongside the Strava
+   fitness/freshness pull. **Also read the upcoming 1–2 weeks from Google Calendar** (the
+   live schedule + fixed commitments) — prefer it over memory if they disagree, and
+   reconcile.
 
 2. **Produce the review in these sections:**
 
@@ -20,8 +24,11 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
 
    ### 📈 Fitness trend
    Direction of CTL/fitness, ATL/fatigue, and form/freshness. Are we building,
-   holding, or digging a hole? If there's a dated A goal in `memory/goals.md`, how many
-   weeks remain and are we on track?
+   holding, or digging a hole? Fold in the COROS recovery/HRV/sleep/stress trend
+   alongside CTL/ATL/form — e.g. rising fatigue paired with declining recovery or
+   below-normal HRV strengthens the read; recovering HRV against a big training week
+   is a good sign. If there's a dated A goal in `memory/goals.md`, how many weeks
+   remain and are we on track?
 
    ### ✅ Wins / ⚠️ Concerns
    Honest read — consistency, key sessions hit or missed, fatigue/health flags.
