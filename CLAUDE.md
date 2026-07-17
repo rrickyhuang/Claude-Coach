@@ -69,7 +69,10 @@ Memory is what separates this from a stateless chat. After every substantive ses
   (key metrics, how it went vs. plan, notable observations). Newest at top.
 - **`memory/training-plan.md`** — update if the plan shifted (missed week, illness,
   a block completed, taper adjustments).
-- **`memory/health-notes.md`** — update sleep/fatigue/injury/nutrition signals.
+- **`memory/health-notes.md`** — update sleep/fatigue/injury/nutrition signals. Also
+  append structured COROS wellness lines (`- YYYY-MM-DD — Recovery: X% | HRV: Xms
+  (baseline: Yms) | Sleep score: X | Stress: X`) to its "COROS wellness log" section
+  alongside the existing qualitative notes.
 - **`memory/athlete-profile.md`** — update only when a durable fact changes (new FTP,
   weight trend, new baseline).
 - **`memory/goals.md`** — update when a goal is added, reached, or dropped (move
