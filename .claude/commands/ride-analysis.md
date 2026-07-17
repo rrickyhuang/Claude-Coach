@@ -19,7 +19,12 @@ Steps:
    `memory/athlete-profile.md` (zones, FTP), `memory/training-plan.md` (what this week
    was *supposed* to be), and the top of `memory/training-log.md` (recent history). Then
    pull the activity from the Strava MCP — including HR, power, pace, elevation, and
-   time-in-zone if available.
+   time-in-zone if available. Also pull COROS recovery status (`queryRecoveryStatus`) and
+   sleep data (`querySleepData`) from around the time of the activity, to contextualize how
+   the ride felt against how recovered the athlete actually was. Activity data itself
+   stays Strava-primary — only fall back to COROS activity data (`querySportRecords`,
+   `getActivityDetail`, `downloadActivityFitFiles`) when Strava doesn't have the activity
+   at all.
 
 2. **Produce the analysis in exactly these sections:**
 
@@ -33,7 +38,9 @@ Steps:
 
    ### 🔍 What the data shows
    2–4 specific observations grounded in the numbers — pacing, zone distribution,
-   cardiac drift / durability, climbing power, fade in the back half, fueling signs.
+   cardiac drift / durability, climbing power, fade in the back half, fueling signs. Fold
+   in COROS recovery/sleep context when it's relevant to explaining the numbers, e.g.
+   "power was down 8% but recovery was only 40% going in."
 
    ### 🗣️ Athlete report
    Only include this section if the athlete gave subjective notes. Reconcile what they
