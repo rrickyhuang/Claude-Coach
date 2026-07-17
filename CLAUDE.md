@@ -37,7 +37,14 @@ memory whenever they disagree.
 - **Daily sync floor:** on the first session of a new calendar day, pull the current
   week and reconcile against `training-plan.md` before anything else, even outside
   `/weekly-review`. This is what keeps the two from drifting on days with no explicit
-  planning ask.
+  planning ask. Also pull a lightweight COROS wellness glance at the same time —
+  recovery level, resting HR, sleep score. Proactively flag it if `queryRecoveryStatus`
+  reads Low/Poor, or `querySleepHrv` evaluation reads below the athlete's normal range
+  (use COROS's own categorical labels, not invented numeric thresholds). If flagged,
+  proactively suggest modifying that day's planned session, but still ask before
+  touching the calendar — the same-section guardrails below (only `🚴`-prefixed events,
+  confirm before deleting/moving a key session) still apply. This is a quick glance, not
+  the full report — point to `/readiness` for the on-demand deep dive.
 - **Commute-ride gap check** (part of the daily sync, and every `/weekly-review`): scan
   the upcoming 1–2 weeks of weekdays for missing "🚴 Commute ride (Z2, easy)" blocks,
   spaced away from the day before/after a key long ride or hard interval session.
