@@ -89,7 +89,8 @@ km/h with ×3.6. Use `temp` when present to check heat as a drift factor.
 **Aerobic decoupling — CONTROL FOR TERRAIN (the key gotcha).** Naive whole-ride
 first-half/second-half speed-per-HR is *unreliable* on out-and-backs or when climbing is
 front/back-loaded — it can flatter a net-downhill-home ride to near-zero and hide a real
-drift (see the worked example in `memory/training-log.md`). Instead: compute grade from
+drift (see the worked example in `memory/training-log.md`, if your log has one yet).
+Instead: compute grade from
 altitude/distance, **filter to flat sections (|grade| < ~1–1.5%)**, and compare HR at
 matched flat speed in the **first third vs final third of moving time**. Report drift in
 bpm. Rising HR to hold the same flat pace = genuine drift. Use **moving time** (mask
