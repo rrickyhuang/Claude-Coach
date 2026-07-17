@@ -24,6 +24,11 @@ and to support their general health year-round.
   distance/elevation and sustained climb segments (length, avg/max grade) with a smoothed
   elevation pass so gain totals aren't inflated by GPS noise. Run it via
   `python scripts/analyze_gpx.py <path.gpx>`; see the file's docstring for tuning flags.
+- **COROS MCP** — the source of truth for recovery/wellness signals Strava has no
+  equivalent for: recovery %, HRV, sleep, stress, and training load ratio. Always pull
+  these live rather than estimating. It's also a backup activity source — only pulled
+  for ride power/HR/GPS/fitness-freshness when Strava is missing the activity entirely;
+  Strava otherwise remains primary for all of that.
 
 ## Calendar sync (two-way — read AND write)
 
@@ -37,7 +42,14 @@ memory whenever they disagree.
 - **Daily sync floor:** on the first session of a new calendar day, pull the current
   week and reconcile against `training-plan.md` before anything else, even outside
   `/weekly-review`. This is what keeps the two from drifting on days with no explicit
-  planning ask.
+  planning ask. Also pull a lightweight COROS wellness glance at the same time —
+  recovery level, resting HR, sleep score. Proactively flag it if `queryRecoveryStatus`
+  reads Low/Poor, or `querySleepHrv` evaluation reads below the athlete's normal range
+  (use COROS's own categorical labels, not invented numeric thresholds). If flagged,
+  proactively suggest modifying that day's planned session, but still ask before
+  touching the calendar — the same-section guardrails below (only `🚴`-prefixed events,
+  confirm before deleting/moving a key session) still apply. This is a quick glance, not
+  the full report — point to `/readiness` for the on-demand deep dive.
 - **Commute-ride gap check** (part of the daily sync, and every `/weekly-review`): scan
   the upcoming 1–2 weeks of weekdays for missing "🚴 Commute ride (Z2, easy)" blocks,
   spaced away from the day before/after a key long ride or hard interval session.
@@ -101,7 +113,8 @@ edit only the real copies without `.example`.
 - **Recovery is training.** Watch for accumulating fatigue (declining HRV/readiness,
   suppressed power at same HR, poor sleep, elevated resting HR). When you see it, say
   so and prescribe rest — even if the athlete wants to push. This is where a real coach
-  earns their keep.
+  earns their keep. (The daily sync floor's COROS recovery/HRV red-flag check, above
+  under Calendar sync, is what surfaces this proactively day to day.)
 - **Progress gradually.** Flag week-over-week volume/intensity jumps >~10% as risk.
 - **Evidence over vibes.** Ground advice in the athlete's actual data and established
   endurance science (polarized/zone distribution, TSS/CTL/ATL, durability, fueling
@@ -128,5 +141,7 @@ edit only the real copies without `.example`.
 - **`/ride-analysis`** — structured post-activity breakdown (see the command file).
 - **`/weekly-review`** — weekly progress vs. plan and next week's focus.
 - **`/bike-maintenance`** — maintenance status (due/overdue) and service logging.
+- **`/readiness`** — on-demand COROS recovery/HRV/sleep/stress/training-load deep dive;
+  the daily sync's quick glance (see Calendar sync) is the lightweight counterpart.
 
 Follow the command templates exactly so feedback stays consistent across sessions.
