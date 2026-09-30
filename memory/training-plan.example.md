@@ -63,5 +63,17 @@ in the event description since it's decidable in advance.
 Use the athlete's real weekday start times (see `athlete-profile.md`'s Schedule &
 logistics section) rather than an arbitrary default when scheduling after-work sessions.
 
+**When a session is folded into a commute leg:** never collapse the commute distance and
+the training distance into one blended number (e.g. "~34+ km") — it reads as ambiguous
+and the math is easy to get wrong. Instead break the `<b>Distance:</b>` line into its
+actual separate legs:
+```
+<b>Distance — separate legs, don't sum into one "daily total":</b>
+• This event (PM leg): [direct commute-home baseline] + [detour/training add-on, if any]
+• Separate AM commute ([~X km]) already happened this morning — not part of this event
+```
+If the training happens on-route (no detour needed), say so explicitly instead of
+defaulting to a detour assumption — ask the athlete which applies if it's a new route.
+
 ## Notes / adjustments
 - (Coach logs plan changes here with dates: missed weeks, illness, block completions.)
