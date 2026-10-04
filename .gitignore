@@ -8,6 +8,7 @@ memory/*.md
 .env
 .env.*
 .claude/settings.local.json
+morning-sync.log
 
 # OS / editor junk
 Thumbs.db
