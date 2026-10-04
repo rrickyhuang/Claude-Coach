@@ -1,7 +1,7 @@
 # Training Log
 
 _Running log of analyzed rides/hikes. Coach appends a dated entry after each
-`/ride-analysis` and a weekly summary after each `/weekly-review`. **Newest at top.**
+`/activity-analysis` and a weekly summary after each `/weekly-review`. **Newest at top.**
 Copy to `training-log.md`._
 
 <!-- Entry format:

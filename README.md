@@ -10,7 +10,7 @@ This project fixes that by wrapping it in four things Claude Code makes real:
 
 1. **Persistent memory** — `memory/` files Claude reads *and updates* after every session,
    so training state compounds instead of evaporating between chats.
-2. **Structured commands** — `/ride-analysis` and `/weekly-review` run the *same*
+2. **Structured commands** — `/activity-analysis` and `/weekly-review` run the *same*
    analysis template every time, so feedback is consistent, not improvised.
 3. **A defined method** — `CLAUDE.md` encodes a real coaching philosophy (periodization
    toward a dated goal, rolling focus blocks for ongoing goals, when to push vs. recover)
@@ -57,7 +57,7 @@ This project fixes that by wrapping it in four things Claude Code makes real:
    ```
 4. **Start coaching.** After a ride or hike:
    ```
-   /ride-analysis            # structured post-activity breakdown
+   /activity-analysis        # structured post-activity breakdown
    /weekly-review            # progress vs. plan + next week's focus
    ```
 
@@ -65,7 +65,7 @@ This project fixes that by wrapping it in four things Claude Code makes real:
 
 - `CLAUDE.md` — coaching method, tone, safety, calendar-sync guardrails, memory-update
   rules (the system's brain)
-- `.claude/commands/ride-analysis.md` — `/ride-analysis`: structured post-activity breakdown
+- `.claude/commands/activity-analysis.md` — `/activity-analysis`: structured post-activity breakdown
 - `.claude/commands/weekly-review.md` — `/weekly-review`: weekly progress vs. plan + next week
 - `memory/goals.md` — what you're training toward: target event(s), non-event goals,
   constraints (source of truth for goal state)

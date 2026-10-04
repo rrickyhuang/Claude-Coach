@@ -1,5 +1,5 @@
 ---
-description: Structured post-activity analysis of the most recent (or specified) ride/hike
+description: Structured post-activity analysis of the most recent (or specified) ride/run/hike
 argument-hint: "[activity name/date] [-- how it felt, struggles, questions, food/hydration notes]"
 ---
 
@@ -19,9 +19,12 @@ Steps:
    `memory/athlete-profile.md` (zones, FTP), `memory/training-plan.md` (what this week
    was *supposed* to be), and the top of `memory/training-log.md` (recent history). Then
    pull the activity from the Strava MCP — including HR, power, pace, elevation, and
-   time-in-zone if available. Also pull COROS recovery status (`queryRecoveryStatus`) and
-   sleep data (`querySleepData`) from around the time of the activity, to contextualize how
-   the ride felt against how recovered the athlete actually was. Activity data itself
+   time-in-zone if available. Also pull COROS sleep data (`querySleepData`, `querySleepHrv`)
+   from the night before the activity — reliably pre-ride since they're dated by wake-up
+   day — and recovery status (`queryRecoveryStatus`)/stress (`queryStressLevel`) for
+   post-ride fatigue context, keeping in mind those two are current-snapshot only (see the
+   data gotchas checklist below) and can't be trusted as a pre-ride signal in a same-day
+   analysis. Activity data itself
    stays Strava-primary — only fall back to COROS activity data (`querySportRecords`,
    `getActivityDetail`, `downloadActivityFitFiles`) when Strava doesn't have the activity
    at all.
@@ -128,6 +131,13 @@ Flag the temperature confound when temp data is missing/low.
   data blip (e.g. "that HR spike was a hard reaccel out of a stop") is a hypothesis
   unless the raw stream or the athlete confirms it — say "likely"/"possibly," or ask,
   rather than stating it as fact.
+- **`queryRecoveryStatus`/`queryStressLevel` are current-snapshot only, not historical.**
+  They take no date parameter, so pulling them during a same-day post-ride analysis
+  returns fatigue *from that ride*, not a pre-ride readiness signal — don't frame a
+  post-ride Recovery%/Stress reading as something that "should have been caught" before
+  the ride. Only `querySleepData`/`querySleepHrv` are reliably pre-ride for a same-day
+  analysis (they're dated by wake-up day) — lean on those, not Recovery%/Stress, when
+  reconstructing what the athlete's readiness looked like going in.
 
 ## Standing coaching points to reinforce
 - Long rides: hold the athlete's flat-ground HR ceiling early (see `memory/athlete-profile.md`); let climbs go above. Praise Z2 discipline.

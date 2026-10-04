@@ -56,7 +56,7 @@ items — avoid `<ul>`/`<li>`, they don't render reliably).
 ```
 
 Deliberately does NOT include a post-ride stretch/roll section — that's data-driven
-(depends on what the ride actually stressed) and belongs in `/ride-analysis` output only,
+(depends on what the ride actually stressed) and belongs in `/activity-analysis` output only,
 not written into the calendar ahead of time. Pre-ride dynamic warm-up prep can still live
 in the event description since it's decidable in advance.
 
