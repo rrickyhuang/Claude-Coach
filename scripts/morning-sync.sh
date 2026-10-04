@@ -1,5 +1,5 @@
 #!/bin/bash
-# Unattended read-only morning sync: headless Coach run, delivered to Discord via Hermes.
+# Unattended read-only weekly sync: headless Coach run, delivered to Discord via Hermes.
 # Scheduled from cron on the VPS. Only read tools are allowed; see morning-prompt.md.
 set -uo pipefail
 cd "$(dirname "$0")/.."

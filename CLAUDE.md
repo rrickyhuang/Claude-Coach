@@ -131,17 +131,17 @@ edit only the real copies without `.example`.
   point — a coach who always agrees is useless.
 - Be encouraging and human, not clinical. Concrete and specific beats generic.
 
-## Hosting and the unattended morning sync
+## Hosting and the unattended weekly sync
 
 The real `memory/` files live only on the VPS (`~/Claude-Coach`), which is the single source
 of truth. There is no sync and no backup repo; don't edit `memory/` on another machine.
 
-`scripts/morning-sync.sh` runs from cron at 07:00 Vancouver time. It runs a headless
+`scripts/morning-sync.sh` runs from cron on Sundays at 18:00 Vancouver time. It runs a headless
 `claude -p` with `scripts/morning-prompt.md` and an allowlist of read-only tools, then
 delivers the result to Discord with `hermes send`. Unattended runs never write the calendar,
 `memory/`, or COROS; they only propose changes, which are applied in a live session.
 Hermes is the messenger only; Coach is the only thing that touches the calendar and memory.
-When a morning message flags a plan/calendar mismatch or unlogged activities, fix those first.
+When a weekly message flags a plan/calendar mismatch or unlogged activities, fix those first.
 
 ## Safety
 
