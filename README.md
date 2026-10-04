@@ -55,7 +55,7 @@ This project fixes that by wrapping it in four things Claude Code makes real:
    cp memory/training-log.example.md   memory/training-log.md
    cp memory/health-notes.example.md   memory/health-notes.md
    ```
-4. **Start coaching.** After a ride or hike:
+4. **Start coaching.** After a ride, run, or hike:
    ```
    /activity-analysis        # structured post-activity breakdown
    /weekly-review            # progress vs. plan + next week's focus

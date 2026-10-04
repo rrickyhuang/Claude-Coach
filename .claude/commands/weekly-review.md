@@ -10,7 +10,7 @@ Run a weekly review. If `$ARGUMENTS` names a week, use it; otherwise review the
    `memory/training-log.md`, and `memory/health-notes.md`. Pull the week's activities and
    fitness/freshness/readiness trends from the Strava MCP. Also pull the week's COROS
    trend data — average and resting heart rate (`queryAvgHeartRate`,
-   `queryRestingHeartRate`), sleep (`querySleepData`), stress (`queryStressLevel`), and
+   `queryRestingHeartRate`), sleep (`querySleepOverview`), stress (`queryStressLevel`), and
    training load assessment (`queryTrainingLoadAssessment`) — alongside the Strava
    fitness/freshness pull. **Also read the upcoming 1–2 weeks from Google Calendar** (the
    live schedule + fixed commitments) — prefer it over memory if they disagree, and

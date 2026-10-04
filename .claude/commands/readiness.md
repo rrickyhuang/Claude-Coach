@@ -13,7 +13,7 @@ wants the complete picture rather than just the headline flag.
    (recent signals, ongoing niggles). Then pull from the COROS MCP:
    - Recovery status (`queryRecoveryStatus`)
    - Sleep HRV assessment vs. baseline (`querySleepHrv`)
-   - Sleep data/architecture (`querySleepData`)
+   - Sleep data/architecture (`querySleepOverview`)
    - Stress trend (`queryStressLevel`)
    - Training load assessment (`queryTrainingLoadAssessment`)
    - Fitness assessment overview (`queryFitnessAssessmentOverview`), if relevant to the

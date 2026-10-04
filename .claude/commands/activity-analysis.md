@@ -19,7 +19,7 @@ Steps:
    `memory/athlete-profile.md` (zones, FTP), `memory/training-plan.md` (what this week
    was *supposed* to be), and the top of `memory/training-log.md` (recent history). Then
    pull the activity from the Strava MCP — including HR, power, pace, elevation, and
-   time-in-zone if available. Also pull COROS sleep data (`querySleepData`, `querySleepHrv`)
+   time-in-zone if available. Also pull COROS sleep data (`querySleepOverview`, `querySleepHrv`)
    from the night before the activity — reliably pre-ride since they're dated by wake-up
    day — and recovery status (`queryRecoveryStatus`)/stress (`queryStressLevel`) for
    post-ride fatigue context, keeping in mind those two are current-snapshot only (see the
@@ -135,7 +135,7 @@ Flag the temperature confound when temp data is missing/low.
   They take no date parameter, so pulling them during a same-day post-ride analysis
   returns fatigue *from that ride*, not a pre-ride readiness signal — don't frame a
   post-ride Recovery%/Stress reading as something that "should have been caught" before
-  the ride. Only `querySleepData`/`querySleepHrv` are reliably pre-ride for a same-day
+  the ride. Only `querySleepOverview`/`querySleepHrv` are reliably pre-ride for a same-day
   analysis (they're dated by wake-up day) — lean on those, not Recovery%/Stress, when
   reconstructing what the athlete's readiness looked like going in.
 
