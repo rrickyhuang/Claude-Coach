@@ -42,7 +42,7 @@ memory whenever they disagree.
 - **Daily sync floor:** on the first session of a new calendar day, pull the current
   week and reconcile against `training-plan.md` before anything else, even outside
   `/weekly-review`. This is what keeps the two from drifting on days with no explicit
-  planning ask. If today has a weekday after-work `🚴` event still marked as a
+  planning ask. If today has a weekday after-work `💪` event still marked as a
   commute-status "PLACEHOLDER" (unconfirmed 5 PM/7 PM start), ask whether the athlete
   bike-commuted in this morning and lock in the correct start time (and commute-leg
   distance breakdown if the session has a concrete distance target) before the day is
@@ -51,11 +51,11 @@ memory whenever they disagree.
   reads Low/Poor, or `querySleepHrv` evaluation reads below the athlete's normal range
   (use COROS's own categorical labels, not invented numeric thresholds). If flagged,
   proactively suggest modifying that day's planned session, but still ask before
-  touching the calendar — the same-section guardrails below (only `🚴`-prefixed events,
+  touching the calendar — the same-section guardrails below (only `💪`-prefixed events,
   confirm before deleting/moving a key session) still apply. This is a quick glance, not
   the full report — point to `/readiness` for the on-demand deep dive.
 - **Commute-ride gap check** (part of the daily sync, and every `/weekly-review`): scan
-  the upcoming 1–2 weeks of weekdays for missing "🚴 Commute ride (Z2, easy)" blocks,
+  the upcoming 1–2 weeks of weekdays for missing "💪 Commute ride (Z2, easy)" blocks,
   spaced away from the day before/after a key long ride or hard interval session.
   Proactively propose specific fill-in dates using the real weekday start times in
   `athlete-profile.md` (5 PM if he commuted in that morning, 7 PM if not), then wait for
@@ -72,7 +72,7 @@ memory whenever they disagree.
   untouched is exactly how the Jul 29 LTHR test sat at a flat 6:00 PM for weeks after the
   5PM/7PM rule was added. Re-derive the start time explicitly, per event, any time you're
   touching that event for another reason.
-- **Verification checklist — run this explicitly every time a `🚴` event's date, start
+- **Verification checklist — run this explicitly every time a `💪` event's date, start
   time, or distance is read out or set, not just when something looks off:**
   1. **Date/day-of-week:** state the event's actual `start.dateTime` and compute its
      day-of-week yourself before reporting it as "today"/"tomorrow"/a weekday name —
@@ -81,7 +81,7 @@ memory whenever they disagree.
      the same session, explicitly compare the two dates/times. If they disagree, report
      the live calendar's version (it wins) AND flag the mismatch to the athlete — don't
      silently pick one.
-  3. **Commute-day start time:** for **any** weekday after-work `🚴` session — not just
+  3. **Commute-day start time:** for **any** weekday after-work `💪` session — not just
      ones literally titled "Commute ride," and not just sessions folded into a commute
      leg — check whether that specific date is a commute day before setting/reporting
      the start time: 5:00 PM if commuted in that morning, 7:00 PM if not
@@ -94,13 +94,18 @@ memory whenever they disagree.
      ~17 km one-way leg), not left at the standalone interval-only target.
 
 **Guardrails — this is the athlete's real personal calendar:**
-- **Only ever touch `🚴`-prefixed training events.** Treat everything else (flights,
+- **Only ever touch `💪`-prefixed training events.** Treat everything else (flights,
   appointments, trips, social plans) as read-only context for scheduling around.
+  **Convention changed 2026-10-16:** training events now use the `💪` prefix (covers
+  rides, runs, hikes, strength — not just cycling) and **Sage green (Calendar `colorId`
+  "2")**. Set both on every new training event. Events created before 2026-10-16 still
+  carry the old `🚴` prefix and no colour — treat `🚴` events as training events too when
+  searching, and don't mass-retag them unless asked.
 - **Small edits — description tweaks, same-day time changes — can be made directly and
   reported after.** Confirm first for anything bigger: deleting an event, or moving a
   key session to a different day.
 - **Commute-ride duration is fixed real-world travel time, never a scheduling lever.**
-  The ~60–75 min on a "🚴 Commute ride" event is how long it actually takes to get home —
+  The ~60–75 min on a "💪 Commute ride" event is how long it actually takes to get home —
   shortening it doesn't make the commute shorter, it just makes the calendar wrong.
   Corrected 2026-07-26 after doing exactly this (compressed a commute ride to clear a
   conflict) — Ricky can't "magically get home twice as fast." When a commute ride

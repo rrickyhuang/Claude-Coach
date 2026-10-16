@@ -19,4 +19,4 @@ elif [ "$(echo "$out" | tr -d '[:space:]')" = "[SILENT]" ]; then
   exit 0
 fi
 
-printf '%s' "$out" | docker exec -i hermes hermes send --to discord --subject "🚴 Coach" -f -
+printf '%s' "$out" | docker exec -i hermes hermes send --to discord --subject "💪 Coach" -f -

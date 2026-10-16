@@ -38,7 +38,7 @@ tags instead (Calendar supports `<b>`, line breaks via `\n`, and a `•` charact
 items — avoid `<ul>`/`<li>`, they don't render reliably).
 
 ```
-🚴 [Session type/name]
+💪 [Session type/name]
 
 <b>Moving time:</b> range/upper/lower bound (e.g. "60–70 min", "≤90 min", "≥45 min")
 <b>Total time (incl. breaks):</b> this is what sets the calendar event's actual start/end block

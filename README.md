@@ -15,7 +15,7 @@ This project fixes that by wrapping it in four things Claude Code makes real:
 3. **A defined method** — `CLAUDE.md` encodes a real coaching philosophy (periodization
    toward a dated goal, rolling focus blocks for ongoing goals, when to push vs. recover)
    and tells Claude to hold you accountable rather than just validate you.
-4. **Two-way Google Calendar sync** — the actual training plan lives as `🚴`-prefixed
+4. **Two-way Google Calendar sync** — the actual training plan lives as `💪`-prefixed
    calendar events alongside your real commitments. Claude reads the live schedule when
    planning and writes changes back, guardrailed to only ever touch training events and
    to confirm before deletes or big moves (see `CLAUDE.md`'s "Calendar sync" section).
@@ -81,9 +81,9 @@ This project fixes that by wrapping it in four things Claude Code makes real:
 - **Strava MCP is read-only.** Nothing is written back to Strava or pushed to a device;
   all coaching output lives in this repo's memory files.
 - **Google Calendar is the schedule's source of truth, synced two-way.** Training
-  sessions are `🚴`-prefixed events; `memory/training-plan.md` mirrors them + holds
+  sessions are `💪`-prefixed events; `memory/training-plan.md` mirrors them + holds
   rationale. The coach may read the whole calendar (to plan around commitments) but only
-  ever *writes* to `🚴` training events, and confirms before deletes or big moves.
+  ever *writes* to `💪` training events, and confirms before deletes or big moves.
 - **Personal data is gitignored.** Everything in `memory/` (except `*.example.md`) stays
   private; the repo is safe to make public.
 - **Memory is the differentiator.** The standing rule in `CLAUDE.md` — update the log/
