@@ -1,0 +1,17 @@
+# systemd user unit for the Remote Control server. Install (once, after
+# `sudo loginctl enable-linger ricky`):
+#   systemctl --user link ~/Claude-Coach/scripts/coach-remote.service
+#   systemctl --user enable --now coach-remote.service
+[Unit]
+Description=Claude Code Remote Control server for Coach
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/Claude-Coach/scripts/coach-remote.sh
+Restart=always
+RestartSec=30
+MemoryHigh=700M
+
+[Install]
+WantedBy=default.target
